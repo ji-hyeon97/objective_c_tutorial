@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hzy-Jy-fne">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MyWebBroswer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zbx-ZY-vLW">
+                                <rect key="frame" x="0.0" y="103" width="393" height="666"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="JZS-Qg-5IY">
+                                <rect key="frame" x="178" y="407.66666666666669" width="37" height="37"/>
+                                <color key="color" systemColor="systemYellowColor"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Zbx-ZY-vLW" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="1yx-XQ-M5i"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Zbx-ZY-vLW" secondAttribute="bottom" id="5nU-0j-7tV"/>
+                            <constraint firstItem="Zbx-ZY-vLW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="8cS-Zz-nAV"/>
+                            <constraint firstItem="Zbx-ZY-vLW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="DQ7-W9-BAl"/>
+                            <constraint firstItem="JZS-Qg-5IY" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="YRf-TE-ZZs"/>
+                            <constraint firstItem="Zbx-ZY-vLW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="fTb-jd-283"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Zbx-ZY-vLW" secondAttribute="trailing" id="hsU-zo-MH1"/>
+                            <constraint firstItem="Zbx-ZY-vLW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="jSG-WN-fZP"/>
+                            <constraint firstItem="Zbx-ZY-vLW" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="tKm-8F-ZDc"/>
+                            <constraint firstItem="JZS-Qg-5IY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="txT-HT-wVK"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="64Q-ht-4VM"/>
+                        <barButtonItem title="Item" systemItem="rewind" id="fln-e4-xh8">
+                            <connections>
+                                <action selector="goBack:" destination="BYZ-38-t0r" id="eKs-1K-eoY"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="OLH-AP-77X"/>
+                        <barButtonItem systemItem="refresh" id="cHa-bo-Yj1">
+                            <connections>
+                                <action selector="refresh:" destination="BYZ-38-t0r" id="bVi-bx-kia"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="nCd-Ff-JFk"/>
+                        <barButtonItem systemItem="fastForward" id="HXW-oO-Qn1">
+                            <connections>
+                                <action selector="goForward:" destination="BYZ-38-t0r" id="KW6-qH-QgZ"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="P3F-bp-5LO"/>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" id="G0N-P2-bL3"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="JZS-Qg-5IY" id="95S-Ug-4Xe"/>
+                        <outlet property="webView" destination="Zbx-ZY-vLW" id="qDx-dN-jr3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1040.4580152671756" y="-27.464788732394368"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="YIp-sQ-ylH">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" id="hzy-Jy-fne" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="QOI-1M-rFX">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="yF4-4q-mcO">
+                        <rect key="frame" x="0.0" y="769" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="TO4-MR-3yY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oXl-Aq-hxz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="113.74045801526717" y="-27.464788732394368"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
