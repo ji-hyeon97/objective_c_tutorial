@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="UpDown" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="83b-QT-mdV">
+                                <rect key="frame" x="16" y="75" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SpL-wy-V1j">
+                                <rect key="frame" x="335" y="75" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2Nf-sr-FxK">
+                                <rect key="frame" x="16" y="104" width="361" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bjD-ze-4qL">
+                                <rect key="frame" x="16" y="146" width="361" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="제출"/>
+                                <connections>
+                                    <action selector="touchUpSubmitButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OzQ-oD-ukI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gpx-Zb-TUa">
+                                <rect key="frame" x="16" y="189" width="361" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="다시 시작">
+                                    <color key="baseForegroundColor" systemColor="systemRedColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="touchUpResetButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SsJ-gT-y2V"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="gpx-Zb-TUa" firstAttribute="trailing" secondItem="bjD-ze-4qL" secondAttribute="trailing" id="2eh-wH-m7s"/>
+                            <constraint firstItem="2Nf-sr-FxK" firstAttribute="top" secondItem="83b-QT-mdV" secondAttribute="bottom" constant="8" id="B8e-wW-cXr"/>
+                            <constraint firstItem="gpx-Zb-TUa" firstAttribute="leading" secondItem="bjD-ze-4qL" secondAttribute="leading" id="BF7-hd-EHh"/>
+                            <constraint firstItem="bjD-ze-4qL" firstAttribute="leading" secondItem="2Nf-sr-FxK" secondAttribute="leading" id="C7x-S1-NwX"/>
+                            <constraint firstItem="83b-QT-mdV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="DGa-fp-iMl"/>
+                            <constraint firstItem="83b-QT-mdV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Wce-wE-Ohy"/>
+                            <constraint firstItem="bjD-ze-4qL" firstAttribute="top" secondItem="2Nf-sr-FxK" secondAttribute="bottom" constant="8" id="bQX-1J-jTa"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2Nf-sr-FxK" secondAttribute="trailing" constant="16" id="dAy-Ix-dxb"/>
+                            <constraint firstItem="2Nf-sr-FxK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="jrc-Gn-l1a"/>
+                            <constraint firstItem="SpL-wy-V1j" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="nGr-aV-AYY"/>
+                            <constraint firstItem="gpx-Zb-TUa" firstAttribute="top" secondItem="bjD-ze-4qL" secondAttribute="bottom" constant="8" id="nuT-0O-RMh"/>
+                            <constraint firstItem="bjD-ze-4qL" firstAttribute="trailing" secondItem="2Nf-sr-FxK" secondAttribute="trailing" id="taU-jy-u0f"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SpL-wy-V1j" secondAttribute="trailing" constant="16" id="uKD-et-eNw"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="A6a-7V-q69" appends="YES" id="dbT-yT-FDb"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="inputField" destination="2Nf-sr-FxK" id="a6h-BZ-fUk"/>
+                        <outlet property="resultLabel" destination="83b-QT-mdV" id="VFq-uC-fUe"/>
+                        <outlet property="turnCountLabel" destination="SpL-wy-V1j" id="9XR-ie-0Ve"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="A6a-7V-q69">
+                    <connections>
+                        <action selector="tapBackground:" destination="BYZ-38-t0r" id="5Fi-l0-AQj"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="113.74045801526717" y="-27.464788732394368"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
