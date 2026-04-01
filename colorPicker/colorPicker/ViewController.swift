@@ -45,7 +45,7 @@ class ViewController: UIViewController {
     
     // MARK: Privates
     private let rgbStep: Float = 255.0
-    private let numberOfRGBStep: Int = 256
+    private let numberOfRGBStep: Int = 52
     private let numberOfAlphaStep: Int = 11
     
     // MARK:- Methods
@@ -127,7 +127,7 @@ extension ViewController: UIPickerViewDelegate, UIPickerViewDataSource {
         if component == ColorComponent.alpha {
             return String(format: "%1.1lf", Double(row) * 0.1)
         } else {
-            return "\(row)"
+            return "\(row * 5)"
         }
     }
     
